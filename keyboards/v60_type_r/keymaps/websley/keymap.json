@@ -123,13 +123,13 @@
       "KC_TRNS",
       "KC_TRNS",
       "KC_TRNS",
-      "ANY(MAC_ALT_LAYER)",
+      "ANY(QK_MAC_OVERLAY)",
       "KC_TRNS",
       "KC_TRNS",
       "KC_TRNS",
       "KC_TRNS",
       "KC_TRNS",
-      "ANY(MAC_ALT_LAYER)",
+      "ANY(QK_MAC_OVERLAY)",
       "KC_TRNS"
     ],
     [

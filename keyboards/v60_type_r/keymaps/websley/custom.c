@@ -1,10 +1,13 @@
 #include QMK_KEYBOARD_H
 #include "keymap.h"
 
-#define BASE_LAYER 0
-#define MAC_BASE_LAYER 1
-#define OVERLAY_LAYER 2
-#define MAC_OVERLAY_LAYER 3
+enum my_layers {
+    BASE_LAYER,
+    MAC_BASE_LAYER,
+    OVERLAY_LAYER,
+    MAC_OVERLAY_LAYER,
+    MIDI_LAYER
+};
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
@@ -15,6 +18,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             } else {
                 layer_off(OVERLAY_LAYER);
                 layer_off(MAC_OVERLAY_LAYER);
+            }
+            return false;
+        case QK_MIDI_START:
+            if (record->event.pressed) {
+                layer_on(MIDI_LAYER);
+            }
+            return false;
+        case QK_MIDI_STOP:
+            if (record->event.pressed) {
+                layer_off(MIDI_LAYER);
             }
             return false;
     }

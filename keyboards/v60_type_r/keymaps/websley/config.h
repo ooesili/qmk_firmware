@@ -18,6 +18,8 @@
 // Treat a dual-role key as held when another key is tapped before releasing it
 #define HOLD_ON_OTHER_KEY_PRESS
 
+#define MIDI_ADVANCED
+
 #ifdef V60_POLESTAR
 #undef V60_POLESTAR
 #endif
